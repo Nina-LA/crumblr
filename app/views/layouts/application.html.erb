@@ -6,14 +6,32 @@
 	  <title>Crumblr</title>
 	  <%= stylesheet_link_tag "defaults", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "defaults", "data-turbolinks-track" => true %>
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
 	  <%= csrf_meta_tags %>
 	</head>
 	
 	<body>
-    <%= link_to "Welcome", "/" %>
-    <%= link_to "About", "/about" %>
-
-	  <%= yield %>
+		<div class="container">
+			<div class="page_header">
+				<ul class="nav nav-pills pull-right">
+					    <li><%= link_to "Home", "/" %></li>
+					    <li><%= link_to "About", "/about" %></li>
+				</ul>
+				<h1>
+					<%= link_to "crumblr", "/" %>
+						<small>
+						//Home baked goodness
+						</small>
+				</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+	  				<%= yield %>
+	  			</div>
+	  		</div>
+	  	</div>
 	</body>
 
 </html>
